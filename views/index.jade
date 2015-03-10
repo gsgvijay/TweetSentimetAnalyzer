@@ -1,0 +1,26 @@
+//extends layout
+
+// This html (jade) script defines the various aspects of the window on which
+//     the output is viewed including a window to view all the tweets and
+//     importing the necessary header files.
+
+block scripts
+	script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+	script(src='/socket.io/socket.io.js')
+	script(src='http://www.google.com/jsapi')
+	script(src='/javascripts/client.sio.js')
+
+block content
+	div(class="container")
+		table(border="0")
+			tr
+				td(width="60%")
+					h3 Tweets:
+				td(width="40%")
+					h3 Comparison:
+			tr
+				td(width="60%")
+					div(id="tweet_container", style="overflow-y:scroll; overflow-x:scroll; height:400px;")
+						ul.tweet_list(id="tweets")
+				td(width="40%")
+					div(id="chart_div")

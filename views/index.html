@@ -1,0 +1,31 @@
+
+<!--extends layout-->
+<!-- This html (jade) script defines the various aspects of the window on which-->
+<!--     the output is viewed including a window to view all the tweets and-->
+<!--     importing the necessary header files.-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://www.google.com/jsapi"></script>
+<script src="/javascripts/client.sio.js"></script>
+<div class="container">
+  <table border="0">
+    <tr>
+      <td width="60%">
+        <h3>Tweets:</h3>
+      </td>
+      <td width="40%">
+        <h3>Comparison:</h3>
+      </td>
+    </tr>
+    <tr>
+      <td width="60%">
+        <div id="tweet_container" style="overflow-y:scroll; overflow-x:scroll; height:400px;">
+          <ul id="tweets" class="tweet_list"></ul>
+        </div>
+      </td>
+      <td width="40%">
+        <div id="chart_div"></div>
+      </td>
+    </tr>
+  </table>
+</div>
